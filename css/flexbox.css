@@ -1,0 +1,146 @@
+.cabecalhoPrincipal .container {
+    display: flex;
+    /* para ajustar no flexbox sempre colocamos o flex no elemento pai dos elementos que queremos mexer. Perguntamos quais elementos queremos mexer e identificamos os seu pai*/
+    vertical-align: center;
+    /* serve para o alinhamento do icone na vertical*/
+    justify-content: space-between;
+    /* Para mexer na posição do eixo diagonnal. O between no caso é oara botar um grande espaço entre eless*/
+
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+    /* como sempre usamos o flex no elemento pai do elemento que queremos mudar*/
+
+}
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* se trata de um espaço entre os elementos*/
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* põe um espaço ao redor dos elementos . Poderia também ser usado em outras ocasiõs o flex-start(espaço a direuta), flex-end(espaço a esquerda) e o center(elementos no meio)*/
+    width: 75%;
+
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+    ;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    height: 252px;
+    /* foi uma medida especifica para essa ocasião*/
+    flex-wrap: wrap;
+    /* serve para fazer  a quebra de linhas quando os elementos ultrapassam o tamanho da caixa*/
+
+}
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    ;
+    flex-wrap: wrap;
+    /* o wrap no entanto deixou um enorme espaço entre os ultimos itens*/
+
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    /* isso aqui foi usado pq os itens perderam a width no processo do flex*/
+    margin: 1%;
+}
+
+.videoSobre .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    /* quando botei os elementos aqui o botão se ajustou ao tamanho dos lementos do flex. Ou seja posso usar isso sem alterar o width*/
+    flex-grow: 5;
+    /* aqui no caso o flex grow foi usado para dar mais espaço para esse elemento do que o outro ja que o valor dele é maior*/
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+    /* o grown aqui foi usado para crescer e tomar o espaço que estava faltando na aixa*/
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+    flex-shrink: 2;/* o shrink serve para o elemento expremer mais dos que os outros. Ele é como se fosse a antitese do flex-grown*/
+
+
+}
+
+/* Parte do mobile*/
+@media(max-width:768px) {
+
+    /* assim ela rendereriza pra mobila até essa largura definida*/
+    .cabecalhoPrincipal .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .cabecalhoPrincipal-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        text-align: center;
+
+
+
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        justify-content: space-evenly;
+        margin-right: 115px;
+
+    }
+
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+        /* a ordem serve basicamente para  alterar a ordem do elemento com base no valor que se põe nele*/
+    }
+
+ 
+    .videoSobre .container {
+        display: flex;
+        flex-direction: column;
+       
+    }
+   
+
+
+
+}
